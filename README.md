@@ -19,11 +19,33 @@ Data manipulation operations: INSERT, UPDATE, DELETE, RETURNING, and bulk operat
 
 ### ✨ Features
 
-| Exercise | Topic |\n|----------|-------|\n| ex00 | INSERT with explicit values |\n| ex01 | INSERT from SELECT |\n| ex02 | INSERT ... ON CONFLICT (upsert) |\n| ex03 | UPDATE with JOIN |\n| ex04 | UPDATE from SELECT |\n| ex05 | DELETE with JOIN |\n| ex06 | DELETE with subquery |\n| ex07 | RETURNING clause |\n| ex08 | Bulk insert |\n| ex09 | Transactions |\n| ex10 | MERGE |\n| ex11 | COPY for import/export |\n| ex12 | Test data generation |\n| ex13 | Complex data migration |
+| Exercise | Topic |
+|----------|-------|
+| ex00 | INSERT with explicit values |
+| ex01 | INSERT from SELECT |
+| ex02 | INSERT ... ON CONFLICT (upsert) |
+| ex03 | UPDATE with JOIN |
+| ex04 | UPDATE from SELECT |
+| ex05 | DELETE with JOIN |
+| ex06 | DELETE with subquery |
+| ex07 | RETURNING clause |
+| ex08 | Bulk insert |
+| ex09 | Transactions |
+| ex10 | MERGE |
+| ex11 | COPY for import/export |
+| ex12 | Test data generation |
+| ex13 | Complex data migration |
 
 ### 🚀 Quick Start
 
-```sql\n-- Upsert example\nINSERT INTO menu (id, pizzeria_id, pizza_name, price)\nVALUES (1, 1, 'Margherita', 500)\nON CONFLICT (id) DO UPDATE SET\n    price = EXCLUDED.price,\n    pizza_name = EXCLUDED.pizza_name;\n```
+```sql
+-- Upsert example
+INSERT INTO menu (id, pizzeria_id, pizza_name, price)
+VALUES (1, 1, 'Margherita', 500)
+ON CONFLICT (id) DO UPDATE SET
+    price = EXCLUDED.price,
+    pizza_name = EXCLUDED.pizza_name;
+```
 
 ---
 
@@ -42,11 +64,33 @@ Data manipulation operations: INSERT, UPDATE, DELETE, RETURNING, and bulk operat
 
 ### ✨ Возможности
 
-| Задача | Тема |\n|--------|------|\n| ex00 | INSERT с явными значениями |\n| ex01 | INSERT из SELECT |\n| ex02 | INSERT ... ON CONFLICT (upsert) |\n| ex03 | UPDATE с JOIN |\n| ex04 | UPDATE из SELECT |\n| ex05 | DELETE с JOIN |\n| ex06 | DELETE с подзапросом |\n| ex07 | RETURNING |\n| ex08 | Массовая вставка |\n| ex09 | Транзакции |\n| ex10 | MERGE |\n| ex11 | COPY для импорта/экспорта |\n| ex12 | Генерация тестовых данных |\n| ex13 | Сложная миграция данных |
+| Задача | Тема |
+|--------|------|
+| ex00 | INSERT с явными значениями |
+| ex01 | INSERT из SELECT |
+| ex02 | INSERT ... ON CONFLICT (upsert) |
+| ex03 | UPDATE с JOIN |
+| ex04 | UPDATE из SELECT |
+| ex05 | DELETE с JOIN |
+| ex06 | DELETE с подзапросом |
+| ex07 | RETURNING |
+| ex08 | Массовая вставка |
+| ex09 | Транзакции |
+| ex10 | MERGE |
+| ex11 | COPY для импорта/экспорта |
+| ex12 | Генерация тестовых данных |
+| ex13 | Сложная миграция данных |
 
 ### 🚀 Быстрый старт
 
-```sql\n-- Пример upsert\nINSERT INTO menu (id, pizzeria_id, pizza_name, price)\nVALUES (1, 1, 'Margherita', 500)\nON CONFLICT (id) DO UPDATE SET\n    price = EXCLUDED.price,\n    pizza_name = EXCLUDED.pizza_name;\n```
+```sql
+-- Пример upsert
+INSERT INTO menu (id, pizzeria_id, pizza_name, price)
+VALUES (1, 1, 'Margherita', 500)
+ON CONFLICT (id) DO UPDATE SET
+    price = EXCLUDED.price,
+    pizza_name = EXCLUDED.pizza_name;
+```
 
 ---
 
