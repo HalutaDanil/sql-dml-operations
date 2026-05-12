@@ -36,16 +36,6 @@ Data manipulation operations: INSERT, UPDATE, DELETE, RETURNING, and bulk operat
 | ex12 | Test data generation |
 | ex13 | Complex data migration |
 
-### 🚀 Quick Start
-
-```sql
--- Upsert example
-INSERT INTO menu (id, pizzeria_id, pizza_name, price)
-VALUES (1, 1, 'Margherita', 500)
-ON CONFLICT (id) DO UPDATE SET
-    price = EXCLUDED.price,
-    pizza_name = EXCLUDED.pizza_name;
-```
 
 ---
 
@@ -81,16 +71,6 @@ ON CONFLICT (id) DO UPDATE SET
 | ex12 | Генерация тестовых данных |
 | ex13 | Сложная миграция данных |
 
-### 🚀 Быстрый старт
-
-```sql
--- Пример upsert
-INSERT INTO menu (id, pizzeria_id, pizza_name, price)
-VALUES (1, 1, 'Margherita', 500)
-ON CONFLICT (id) DO UPDATE SET
-    price = EXCLUDED.price,
-    pizza_name = EXCLUDED.pizza_name;
-```
 
 ---
 
